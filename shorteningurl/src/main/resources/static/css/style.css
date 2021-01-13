@@ -1,0 +1,12 @@
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; background-color: #40362A;}
+html, body, input, div, button { box-sizing: border-box; }
+* { font-family: cursive; }
+
+body { text-align: center; padding-top: 15%; font-size: 14px; }
+input { height: 40px; padding-left: 5px; width: 400px; border: 1px solid; font-size: 10px;}
+button { border: 0; padding: 5px 10px; height: 40px; background-color: #4DB193; cursor: pointer; font-size: 14px;}
+footer { margin-top: 50px; color: #a0a0a0; font-size: 11px; text-align: center; }
+footer a { text-decoration: none; color: #a0a0a0; }
+
+.service_header { margin-bottom: 60px; width: 100%; text-align: center; font-size : 50px; font-weight: bold; color: #4DB193; }
+.panel { margin-left: auto; margin-right: auto; width: 470px; padding: 15px; text-align: left; background-color: #ffffff; }

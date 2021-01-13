@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head>
+    <title>url shortening</title>
+</head>
+<body>
+<th:block layout:fragment="content">
+    <form action="#" th:action="@{/}" method="post"/>
+    <input type="text" th:name="longurl"/>
+    <button type="submit">ENTER</button>
+    </form>
+    <br/>
+    <br/>
+
+    <div class="panel">
+        original URL : <p th:text="${longurl}" />
+        <br/>
+        shorten URL : <p th:text="${shorturl}" />
+    </div>
+</th:block>
+</body>
+</html>
