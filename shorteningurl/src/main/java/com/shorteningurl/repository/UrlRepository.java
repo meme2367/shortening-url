@@ -10,4 +10,10 @@ import java.util.Map;
 @Repository
 public interface UrlRepository {
     List<Map<String, Object>> getUrls();
+
+    Integer getUrlIdByLongUrl(String longurl);
+
+    Integer updateLongUrl(String longurl);
+
+    String getLongUrlById(int id);
 }

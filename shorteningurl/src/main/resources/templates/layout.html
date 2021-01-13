@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+    <header class="service_header">dayeon_shortening_url</header>
+
+    <th:block layout:fragment="content"></th:block>
+    <th:block layout:fragment="wrongurl"></th:block>
+    <th:block layout:fragment="notregisteredurl"></th:block>
+
+
+</body>
+</html>
