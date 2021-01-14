@@ -58,7 +58,7 @@ public class UrlServiceImpl implements UrlService{
         int id = base62Util.decoding(shorturl);
         String longurl = urlRepository.getLongUrlById(id);
 
-        return "http://" + longurl;
+        return longurl;
     }
 
 }
