@@ -33,10 +33,12 @@ public class UrlController {
     @GetMapping("/{shorturl}")
     public String redirect(HttpServletResponse response, @PathVariable String shorturl){
         String longurl= urlService.getLongUrlByShortUrl(shorturl.replace("http://localhost:8080/",""));
+
         if(longurl != null){
             System.out.println("db : " + longurl);
-            return "redirect:"+longurl;
+            return "redirect:"+"http://"+longurl;
         }
-        return "wrong/shortening";
+
+        return "wrong_shortening";
     }
 }
