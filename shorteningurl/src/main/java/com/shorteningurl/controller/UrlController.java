@@ -21,10 +21,6 @@ public class UrlController {
 
     @PostMapping("/")
     public String Shortening(@RequestParam String longurl, Model model){
-        System.out.println("===========");
-        System.out.println(longurl);
-        System.out.println("===========");
-
         model.addAttribute("longurl",longurl);
         model.addAttribute("shorturl",urlService.generateShortUrl(longurl));
         return "index";
@@ -33,12 +29,9 @@ public class UrlController {
     @GetMapping("/{shorturl}")
     public String redirect(HttpServletResponse response, @PathVariable String shorturl){
         String longurl= urlService.getLongUrlByShortUrl(shorturl.replace("http://localhost:8080/",""));
-
         if(longurl != null){
-            System.out.println("db : " + longurl);
             return "redirect:"+"http://"+longurl;
         }
-
         return "wrong_shortening";
     }
 }
